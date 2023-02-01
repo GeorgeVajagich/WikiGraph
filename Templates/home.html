@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UFT-8">
+    <title>Result</title>
+</html>
+<body bgcolor="ADD8E6">
+    <center>
+        <h1>
+            Ask a data related question and get a graph/map as an answer
+        </h1>
+        <form action= "{{url_for('graph') }}" method="POST">
+            <b>Here are some suggestions to get you started</b><br>
+            <br>
+            What are the biggest cities in India<br>
+            Who mines the most Iron<br>
+            us solar power over time<br>
+            what countries do people live the longest<br>
+            <input type = "text" name = "Question" placeholder="type your question here"><br>
+            <input type = "submit" value = "Submit"><br>
+            Warning not all questions can be answered<br>
+            <div id='chart' class='chart'”></div>
+            
+         
+            
+    </form>
+    </center>
+    </body>
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+<script type='text/javascript'>
+  var graphs = {{graphJSON | safe}};
+  Plotly.plot('chart',graphs,{});
+</script>
+
+</html>
