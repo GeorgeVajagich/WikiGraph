@@ -8,8 +8,6 @@ import plotly.express as px # library for plotting
 import pycountry_convert as pc # library to convert country names into codes for mapping
 from plotly import graph_objs as go # library for plotting
 import numpy as np # library for math
-from flask import Flask, render_template # library for website
-from flask import request
 import json # library for dealing with JSON files
 from scipy.stats import pearsonr   
 

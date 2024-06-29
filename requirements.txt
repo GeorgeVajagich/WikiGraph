@@ -1,0 +1,13 @@
+
+pandas
+requests
+bs4
+re
+plotly
+plotly.express
+pycountry_convert
+graph_objs
+numpy
+json
+scipy.stats
+pearsonr   
