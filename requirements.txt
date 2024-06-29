@@ -6,6 +6,5 @@ plotly
 plotly.express
 pycountry_convert
 numpy
-json
 scipy.stats
 pearsonr   
