@@ -118,11 +118,6 @@ def Answer(q):
     return(df[a],df[b])
 
 
-
-
-if not ("&" or "and") in str(question):
-    a,b =Answer(question)
-
 st.title("AutoGraph🤖📊")
 st.write("AutoGraph is a program where you ask it a question and AutoGraph answers your question with a graph (and sometimes a map)")
 st.write("Here is the [link](https://www.youtube.com/watch?v=FAOurWy01pM) to the tutorial and some sample prompts")
@@ -131,6 +126,9 @@ st.text("Biggest cities in India")
 st.text("Countries by Iron Production")
 st.text("Best selling video games of all time")
 st.text("Countries by Grape production & Countries by Wine production")
+
+if not ("&" or "and") in str(question):
+    a,b =Answer(question)
 
 if ("&" or "and") in str(question):
     questions=str(question).split("&" or "and")
