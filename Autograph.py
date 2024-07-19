@@ -127,8 +127,11 @@ st.text("Countries by Iron Production")
 st.text("Best selling video games of all time")
 st.text("Countries by Grape production & Countries by Wine production")
 
-if not ("&" or "and") in str(question):
-    a,b =Answer(question)
+try:
+    if not ("&" or "and") in str(question):
+        a,b =Answer(question)
+except:
+    pass
 
 if ("&" or "and") in str(question):
     questions=str(question).split("&" or "and")
