@@ -7,3 +7,4 @@ pycountry_convert
 numpy
 scipy
 xlrd
+lxml
