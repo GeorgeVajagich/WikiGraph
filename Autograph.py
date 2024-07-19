@@ -10,6 +10,7 @@ from plotly import graph_objs as go # library for plotting
 import numpy as np # library for math
 import json # library for dealing with JSON files
 from scipy.stats import pearsonr   
+import xlrd
 
 st. set_page_config(layout="wide")
 
@@ -118,18 +119,18 @@ def Answer(q):
 
 
 
-try:
-    if not ("&" or "and") in str(question):
-        a,b =Answer(question)
-except:
-    st.title("AutoGraph🤖📊")
-    st.write("AutoGraph is a program where you ask it a question and AutoGraph answers your question with a graph (and sometimes a map)")
-    st.write("Here is the [link](https://www.youtube.com/watch?v=FAOurWy01pM) to the tutorial and some sample prompts")
-    st.text("")
-    st.text("Biggest cities in India")
-    st.text("Countries by Iron Production")
-    st.text("Best selling video games of all time")
-    st.text("Countries by Grape production & Countries by Wine production")
+
+if not ("&" or "and") in str(question):
+    a,b =Answer(question)
+
+st.title("AutoGraph🤖📊")
+st.write("AutoGraph is a program where you ask it a question and AutoGraph answers your question with a graph (and sometimes a map)")
+st.write("Here is the [link](https://www.youtube.com/watch?v=FAOurWy01pM) to the tutorial and some sample prompts")
+st.text("")
+st.text("Biggest cities in India")
+st.text("Countries by Iron Production")
+st.text("Best selling video games of all time")
+st.text("Countries by Grape production & Countries by Wine production")
 
 if ("&" or "and") in str(question):
     questions=str(question).split("&" or "and")
