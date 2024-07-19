@@ -150,7 +150,7 @@ if ("&" or "and") in str(question):
 
     df3=pd.merge(df1,df2, how='inner', on='a')
 
-    fig = px.scatter(df3, x=str(questions[0]), y=str(questions[1]), hover_data=["a"])
+    fig = px.scatter(df3, x=str(questions[0]), y=str(questions[1]), hover_data=["a"], trendline="ols")
     st.text("p value under 0.05 is statistically significant")
     st.text(pearsonr(df3[str(questions[0])],df3[str(questions[1])]))
     st.plotly_chart(fig)
