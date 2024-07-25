@@ -121,6 +121,8 @@ def Answer(q):
 st.title("AutoGraph🤖📊")
 st.write("AutoGraph is a program where you ask it a question and AutoGraph answers your question with a graph (and sometimes a map)")
 st.write("Here is the [link](https://www.youtube.com/watch?v=FAOurWy01pM) to the tutorial and some sample prompts")
+st.write("Here is the [link](https://www.youtube.com/watch?v=FAOurWy01pM) to the tutorial and some sample prompts")
+st.write("Hi")
 st.text("")
 st.text("Biggest cities in India")
 st.text("Countries by Iron Production")
